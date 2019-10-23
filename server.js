@@ -40,7 +40,7 @@ todoRoutes.route("/:id").get(function(req, res) {
 
 todoRoutes.route("/add").post(function(req, res) {
   let todo = new Todo(req.body);
-  todo.save
+  todo.save()
     .then(todo => {
       res.status(200).json({ todo: "todo added successfully" });
     })
